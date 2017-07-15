@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Table Maker Version 1.1</title>
+	</head>
+
+	<body bgcolor = "#FFD18C">
+		<p id = "theText"></p>
+
+		<form>
+
+		<input type = "textbox" value = "# of rows" id = "A"/>
+		<input type = "textbox" value = "# of columns" id = "B"/>
+		<input type = "textbox" value = "Table Color" id = "C"/>
+		<input type = "textbox" value = "Page Color" id = "D"/>
+		<input type = "button" value = "Enter" onclick="makeTable()"/>
+		
+	</form>
+
+		<script type="text/javascript">
+
+				function makeTable(){
+					var row=parseInt(document.getElementById("A").value);
+					var col=parseInt(document.getElementById("B").value);
+					var tab=document.getElementById("C").value;
+					var pag=document.getElementById("D").value;
+
+					var t,i,j;
+					t = "<table border = 1 bgcolor = "+tab+">";
+					for(i=0;i<row;i++){
+						t=t+"<tr>";
+						for(j=0;j<col;j++){
+							t=t+"<td>TEXT</td>";
+					}
+					t = t + "</tr>";
+}
+
+					t = t +"</table>";
+
+				document.getElementById("theText").innerHTML = t;
+				document.body.style.backgroundColor = pag;
+				}
+				
+			</script>
+	</body> 
+</html>
