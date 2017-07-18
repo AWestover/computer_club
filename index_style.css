@@ -32,11 +32,11 @@ a:hover {
 div.text{
     position: absolute;
     top: 20%;
-    right: 30%;
+    left: 30%;
 }
 
 div.links{
     position: absolute;
     top: 20%;
-    right: 10%;
+    left: 10%;
 }
