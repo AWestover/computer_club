@@ -9,10 +9,12 @@ body {
     font-size: 40px;
     font-family:"Courier New";
 }
+/* All links*/
 a {
     color: white;
     font-size: 50px;
 }
+/*Button Links*/
 a.button {
     text-decoration: none;
 }
