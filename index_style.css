@@ -15,5 +15,15 @@ a {
 }
 a.button {
     text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
     background-color: black;
 }
+
+/* mouse over link */
+a:hover {
+    background-color: grey;
+}
+
