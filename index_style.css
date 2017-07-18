@@ -6,13 +6,13 @@ body {
     
     background-color: black;
     color: white;
-    font-size: 40px;
+    font-size: 4%;
     font-family:"Courier New";
 }
 /* All links*/
 a {
     color: white;
-    font-size: 50px;
+    font-size: 5%;
 }
 /*Button Links*/
 a.button {
@@ -31,12 +31,12 @@ a:hover {
 
 div.text{
     position: absolute;
-    top: 5%;
-    left: 30%;
+    top: 3%;
+    left: 25%;
 }
 
 div.links{
     position: absolute;
     top: 20%;
-    left: 10%;
+    left: 5%;
 }
