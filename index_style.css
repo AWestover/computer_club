@@ -45,3 +45,8 @@ div.links{
 img {
     background-color:white;
 }
+
+.fine_print {
+    font-size: 50%
+    width: 40%
+}
