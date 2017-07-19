@@ -37,7 +37,7 @@ div.text{
 }
 
 div.links{
-    position: absolute;
+    position: fixed;/*absolute?*/
     top: 20%;
     left: 1%;
 }
