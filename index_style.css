@@ -46,7 +46,7 @@ img {
     background-color:white;
 }
 
-div.text h6#fine_print.fine_print {
+.fine_print { /*left and top don't work because this is not a specific enough classifier*/
     font-size: 50%
     width: 40%
     position: fixed;
