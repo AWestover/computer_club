@@ -40,7 +40,7 @@ div.text{
 }
 
 div.links{
-    position: absolute;
+    position: fixed;
     top: 20%;
     left: 1%;
 }
@@ -50,11 +50,10 @@ img {
 }
 
 .fine_print {
-    position: absolute;
+    position: fixed;
     font-size: 50%
     width: 40%
     top: 90%:
     left: 90%;
-    width: 300px;
     border: 3px solid grey;
 }
