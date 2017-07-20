@@ -46,7 +46,7 @@ img {
     background-color:white;
 }
 
-.fine_print {
+div.text h6#fine_print.fine_print {
     font-size: 50%
     width: 40%
     position: fixed;
