@@ -8,7 +8,7 @@ body {
     
     background-color: black;
     color: white;
-    font-size: 200%;
+    font-size: 195%;
     font-family:"Courier New";
 }
 
@@ -42,7 +42,7 @@ div.text{
 div.links{
     position: fixed;
     top: 20%;
-    left: 1%;
+    left: 2%;
 }
 
 img {
@@ -51,9 +51,9 @@ img {
 
 .fine_print {
     position: fixed;
-    font-size: 50%
-    width: 40%
-    top: 90%:
-    left: 90%;
+    font-size: 50%;
+    width: 40%;
+    bottom: 0;
+    left: 2%;
     border: 3px solid grey;
 }
