@@ -1,3 +1,5 @@
+/*Main styles for all of the websites that branch off of our main website and the style for the main website*/
+
 body {
     padding-top: 5%;
     padding-right: 5%;
@@ -9,6 +11,7 @@ body {
     font-size: 200%;
     font-family:"Courier New";
 }
+
 /* All links*/
 a {
     color: white;
@@ -37,7 +40,7 @@ div.text{
 }
 
 div.links{
-    position: fixed;
+    position: absolute;
     top: 20%;
     left: 1%;
 }
@@ -46,10 +49,10 @@ img {
     background-color:white;
 }
 
-.fine_print { /*left and top don't work because this is not a specific enough classifier*/
+.fine_print {
+    position: absolute;
     font-size: 50%
     width: 40%
-    position: fixed;
     top: 90%:
     left: 90%;
     width: 300px;
