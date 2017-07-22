@@ -1,5 +1,0 @@
-git init in new dirrectory
-git pull dirrectory url
-
-
-my git test update
