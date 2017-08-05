@@ -15,7 +15,7 @@ var ct;
 var place;
 
 function reset_variables() {
-  screen_dims = [400, 400];
+  screen_dims = [200, 200];
   screen_color = [0, 0, 0];
   rings = 3;
   descending_rings = [];
@@ -38,7 +38,7 @@ function setup() {
 
 function draw() {
   frameRate(2);
-  background(200);
+  background(screen_color[0], screen_color[1], screen_color[2]);
 
   if (ct > 2) {
     if (place != move_sequence.length-1) {
