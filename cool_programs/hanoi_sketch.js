@@ -1,36 +1,52 @@
 // Alek Westover
 
-var screen_dims = [200, 200];
-var screen_color = [0, 0, 0];
-var rings = 3;
-var descending_rings = [];
-for (var i = rings-1; i >= 0; i--) {
-  descending_rings.push(i);
+// Deep array copy JSON.parse(JSON.stringify(object));
+// Note: Arrays are mutable in javascript, strings and numbers are immutable
+// Maybe work on fixing the recursion block later
+
+// make global variables
+var screen_dims;
+var screen_color;
+var rings;
+var descending_rings;
+var move_sequence;
+var th;
+var ct;
+var place;
+
+function reset_variables() {
+  screen_dims = [400, 400];
+  screen_color = [0, 0, 0];
+  rings = 3;
+  descending_rings = [];
+  for (var i = rings-1; i >= 0; i--) {
+    descending_rings.push(i);
+  }
+  move_sequence = [JSON.parse(JSON.stringify([descending_rings, [], []]))];  //a list  of states
+  th = 3.141/2;
+  ct = 0;
+  place = 0;
 }
-var state = [descending_rings, [], []];
-var move_sequence = [state];//a list of states
-var th = 3.141/2;
-var ct = 0;
-var place = 0;
 
 
 function setup() {
+  reset_variables();
   createCanvas(screen_dims[0], screen_dims[1], WEBGL);
-  move_stack(2, 0, 0, state);
+  move_stack(2, 0, 0, JSON.parse(JSON.stringify(move_sequence[0])));
 }
 
 
 function draw() {
-  frameRate(0.1);
+  frameRate(2);
   background(200);
 
-  if (ct == 10) {
+  if (ct > 2) {
     if (place != move_sequence.length-1) {
         place += 1;
         ct = 0;
     }
   }
-  if (ct == 30) {
+  if (ct > 6) {
     place = 0;
     ct = 0;
   }
@@ -61,19 +77,20 @@ function not_included(goal, current) {
 
 // This recursive function is the crux of the program 
 // example parrameters
-// state = [[1,2,3], [4,5,6], [7,8,9]]
-// goal = 1, current = 2, ring = 0 (index in array)
-// no output, dirrectly modifies state
+// state = [[1,2,3], [4,5,6], [7,8,9]];
+// goal = 1, current = 2, ring = 0 (ring is the index in array)
 function move_stack(goal, current, ring, board_state) {
-  if (ring + 1 != state[current].length) {// if not on top of the current stack -> 
-    move_stack(not_included(goal, current), current, ring+1, board_state);//move stuff off 
-    board_state[goal].push(board_state[current].pop()) // pop automaticly removes it
-    move_sequence.push(board_state);
-    move_stack(goal, not_included(goal, current), 0, board_state);//move the stuff we moved
+  if (ring + 1 != board_state[current].length) {  // if not on top of the current stack -> 
+    board_state = move_stack(not_included(goal, current), current, ring+1, board_state);//move stuff off 
+    board_state[goal].push(board_state[current].pop()); // pop automaticly removes it
+    move_sequence.push(JSON.parse(JSON.stringify(board_state)));
+    board_state = move_stack(goal, not_included(goal, current), 0, board_state);//move the stuff we moved
+    return (board_state);
   }
-  else {// if it is on top move our ring to the goal
-    board_state[goal].push(board_state[current].pop()) // pop automaticly removes it
-    move_sequence.push(board_state);
+  else {  // if it is on top move our ring to the goal
+    board_state[goal].push(board_state[current].pop()); // pop automaticly removes it
+    move_sequence.push(JSON.parse(JSON.stringify(board_state)));
+    return (board_state);
   }
 }
 
