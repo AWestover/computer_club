@@ -16,7 +16,7 @@ var place;
 
 function reset_variables() {
   screen_dims = [200, 200];
-  screen_color = [0, 0, 0];
+  screen_color = "#000000";
   rings = 3;
   descending_rings = [];
   for (var i = rings-1; i >= 0; i--) {
@@ -31,14 +31,15 @@ function reset_variables() {
 
 function setup() {
   reset_variables();
-  createCanvas(screen_dims[0], screen_dims[1], WEBGL);
+  var my_canvas = createCanvas(screen_dims[0], screen_dims[1], WEBGL);
+  my_canvas.class("my_canvas");
   move_stack(2, 0, 0, JSON.parse(JSON.stringify(move_sequence[0])));
 }
 
 
 function draw() {
   frameRate(2);
-  background(screen_color[0], screen_color[1], screen_color[2]);
+  background(screen_color);
 
   if (ct > 2) {
     if (place != move_sequence.length-1) {
