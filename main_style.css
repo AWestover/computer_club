@@ -58,7 +58,7 @@ img {
 }
 
 .my_canvas {
-    float:left; 
-    float:bottom;
-    padding: 5%;
+    float: right; 
+    float: top;
+    padding: 2%;
 }
