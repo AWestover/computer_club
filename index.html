@@ -10,15 +10,14 @@
 
     <link href="style.css" rel="stylesheet" type="text/css">
 
+    <link rel="stylesheet" type="text/css" href="libs/slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="libs/slick-1.8.1/slick/slick-theme.css"/>
+
     <title>Computer Projects Club</title>
   </head>
   <body>
+    <script type="text/javascript" src="libs/slick-1.8.1/slick/slick.min.js"></script>
     <div id="header"></div>
-    <script>
-      $('#header').load("header.html", function() {
-        $('#indexNav').addClass("active");
-      });
-    </script>
 
     <div class="container">
       <div class='card'>
@@ -40,6 +39,29 @@
           </ul> 
         </ol>
       </div>
+    
+      <div class='card'>
+        <h1>Past Projects</h1>
+        <div class="poster"></div>
+      </div> 
+      <script>
+        for (let i = 0; i <= 25; i++) {
+          $('.poster').append("<img src='poster/Poster-"+i+".png'>");
+        }
+      </script>
+
+      <script>
+        $('#header').load("header.html", function() {
+          $('#indexNav').addClass("active");
+        });
+        
+        $(document).ready(function(){
+          $('.poster').slick({
+            autoplay: true
+          });
+        });
+      </script>
+
       <div class="card">
         <h1>Information</h1>
         <p>
