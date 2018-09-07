@@ -1,3 +1,7 @@
 body {
-	background-color: lightgrey;
+	background-color: #eff0f2; /*lightgrey*/
+}
+
+.card {
+	padding: 3%;
 }

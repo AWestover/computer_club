@@ -14,7 +14,11 @@
   </head>
   <body>
   	<div id="header"></div>
-    <script>$('#header').load("header.html")</script>
+    <script>
+      $('#header').load("header.html", function() {
+        $('#eventsNav').addClass('active');
+      });
+    </script>
     <br>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNkWfGl3vsfiQUkof9wqvUrjW3EAYJ0khV57suwB6I8_AR7Q/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
     <br>
