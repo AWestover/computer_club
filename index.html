@@ -10,22 +10,51 @@
 
     <link href="style.css" rel="stylesheet" type="text/css">
 
-    <title>Cringy Cool Computer Club</title>
+    <title>Computer Projects Club</title>
   </head>
   <body>
     <div id="header"></div>
-    <script>$('#header').load("header.html")</script>
+    <script>
+      $('#header').load("header.html", function() {
+        $('#indexNav').addClass("active");
+      });
+    </script>
 
     <div class="container">
-      <h1>Main Home Page</h1>
-      <h1>Information</h1>
-      <p class="card">
-        This is a very informative website about the BHS coding club. <br>
-        The coding club was founded in 2017 by two <!--cool -->people. founders := [2]string{"Alek Westover", "Walter Shen"}<br>
-      </p>
-      <p>
-        Why does the computer club (CCCC) exist? That is a good question. The main purpose is to bring   together people interested in computer programming to facilitate learning. Hopefully this can be done through interesting projects and presentations.
-      </p>
+      <div class='card'>
+        <h1>FAQ</h1>
+        <ol>
+          <li>What do you do in the Computer Programming Club?
+          <ul>
+            <li>Work on interesting projects
+            <li>Listen to presentations of projects
+          </ul>
+          <li>When do you meet?
+          <ul>
+            <li>Friday Afternoons
+            <li>Optional hackathon dates recommended, not involved with the club
+          </ul>
+          <li>Should I join?
+          <ul>
+            <li>Yes. Only interest is a prerequisite, not ability.
+          </ul> 
+        </ol>
+      </div>
+      <div class="card">
+        <h1>Information</h1>
+        <p>
+          This is a very informative website about the BHS coding club. <br>
+          The coding club was founded in 2017 by two <!--cool -->people. founders := [2]string{"Alek Westover", "Walter Shen"}<br>
+        </p>
+        <p>
+          Last year we founded the Hackathon Club to help students prepare computer science skills and form teams for hackathons, tech events where students work in teams to create tech-related projects. However, we realized that both the leaders and the members really enjoyed creating small projects during the meetings as preparations for the hackathons as well. As such, we wanted to rename last year's Hackathon Club to this year's Computer Projects Club, to further help facilitate learning and excitement about computer programming. 
+        </p>
+        <p>
+          This club will help bring together motivated students in an after school setting so that the students can create interesting projects collaboratively. The club will meet regularly. During meetings we will talk about upcoming hackathons and other events, help people set up groups for projects, help people work through challenges that they are experiencing with projects, and listen to presentations about complete projects. 
+        </p>
+          Possible project ideas include: a website, a web scraper (to get data), data analysis, a machine learning project, a game, a AI-based game like tic-tac-toe (ML or hard coded) or  cards, all tailored to the student’s interest. No prior coding experience is needed to join the Computer Projects Club, and we can pair people up based on what skills they have. Although it is optional to do the projects, and some students may only come for the presentations it is highly recommended that people who plan to regularly attend work on a project. We want to be able to foster an interest in STEM topics outside of the standardized school curriculum, and be able to provide applications of students’ prior and new knowledge. Skills, like a plant must be grown with care and the correct stimuli, tailored to the specific plant, and should not stifled or deprived of oxygen by a misinformed gardener. Making use of these STEM skills is critical, especially at a point in your life when you have many important decisions to make. How could you accurately know whether or not you enjoy math or computer programming without trying them out first? Experience is extremely helpful, and will help students in college and in the rest of their lives.
+        </p>
+      </div>
     </div>
   </body>
 </html>

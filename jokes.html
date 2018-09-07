@@ -14,49 +14,43 @@
   </head>
   <body>
     <div id="header"></div>
-    <script>$("#header").load("header.html")</script>
-    <div class="container">
+    <script>
+        $("#header").load("header.html", function() {
+            $('#jokesNav').addClass('active');
+        });
+    </script>
+    <div class="container card">
         <h1 class="title">Jokes</h1>   
-        <p>
-        Weight for more content later.
+        <p>Weight for more content later.</p>
+        <p>How is playing the piano similar to most Physics problems?<br> It's better done in a vacuum with no pressure and no one to hear you if you mess up.<br>    
         </p>
-        <br>
+        <h3>slightly less original jokes</h3>
         <p>
-        How is playing the piano similar to most Physics problems?<br>
-        It's better done in a vacuum with no pressure and no one to hear you if you mess up.<br>    
-        </p>
-
-        <h3>slightly less original jokes (copied and pasted)</h3>
-        <p>
-        <br>
-        <br>
         Write the expression for the volume of a thick crust pizza with height "a" and radius "z".<br><br>
-          
-        Infinitely many mathematicians walk into a bar. The first says, "I'll<br>
-        have a drink." The second says, "I'll have half a drink." The third<br>
-        says, "I'll have a quarter of a drink." The barman pulls out just two<br>
-        drinks. The mathematicians are all like, "That's all you're giving<br>
-        us?" The bartender says, "Come on guys. Know your limits."<br>
-        <br>
-          
-        A: "What is the integral of 1/cabin?"<br>
-        B: "log cabin."<br>
-        A: "Nope, houseboat--you forgot the C."<br>
-        <br>
+        </p>
 
+        <p>
+         Infinitely many mathematicians walk into a pizza shop and order some water. The first says, "I'll have a drink." The second says, "I'll have half a drink." The third says, "I'll have a quarter of a drink." The barman pulls out just two drinks. The mathematicians are all like, "That's all you're giving us?" The bartender says, "Come on guys. Know your limits."
+        </p>
+          
+        <p>
+            A: "What is the integral of 1/cabin?"<br>
+            B: "log cabin."<br>
+            A: "Nope, houseboat--you forgot the C."<br>
+            <br>
+        </p>
+
+        <p>
         Q: Why did the chicken cross the road?<br>
         A: The answer is trivial and is left as an exercise for the reader.<br>
         <br>
-          
-        The B in Benoît B. Mandelbrot stand for Benoît B. Mandelbrot.<br>
-        <br><br>
-          
-        What do you get when you cross a mosquito with a mountain climber?<br>
-        Nothing. You can't cross a vector and a scalar.<br>
+        </p>
+
+        <p>The B in Benoît B. Mandelbrot stand for Benoît B. Mandelbrot.</p>
         <br>
-          
-      </p>
+        <p>What do you get when you cross a mosquito with a mountain climber?<br> Nothing. You can't cross a vector and a scalar.</p>
+        <br>
+        <h6 id="fine_print" class="fine_print">Please note not all of these jokes are original, please don't sue us</h6>
     </div>
-    <h6 id="fine_print" class="fine_print">Please note not all of these jokes are original, please don't sue us</h6>
   </body>
 </html>
